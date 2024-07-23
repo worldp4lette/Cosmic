@@ -1,10 +1,15 @@
-﻿# Current TODO
-1. Set up and run the server on Amazon AWS EC2 instance
-2. Designate a fixed IP address to the instance through subscription
-3. Edit client hex as described in the instruction
-4. Setup Webhook in Github repository
-5. Develop another server application that runs in the background, receives HTTP request from Github Webhook server
-6. Test
+﻿# 목표
+- AWS EC2 인스턴스에 서버를 올려서 실행해보자
+
+# 진행상황
+- AWS EC2 인스턴스에 탄력적 IP 주소 발급 (매달 3달러 정도)
+- 원격 저장소에 다음과 같은 Webhook을 설정하였음
+  - master 브랜치에 push 감지 시, 발급받은 인스턴스 IP 주소의 8081번 포트로 http 요청 전송
+- Spring Boot 프레임워크를 이용하여 Webhook에 의한 http 요청 감지하는 서버 프로그램 _CosmicWebhook_ 개발
+- 인스턴스 보안그룹 인바운드 규칙에 Github Webhook IP 주소 추가 [깃헙 API 엔드포인트](https://api.github.com/meta)
+- _CosmicWebhook_을 인스턴스 내에 clone 하고, 빌드 및 실행을 위한 java와 maven 설치
+- 빌드와 실행을 동시에 할 수 있도록 하는 `startup_script.sh` 작성
+- 해당 스크립트가 인스턴스가 시작될 때 자동으로 실행되도록 서비스 추가
 
 # Cosmic
 Cosmic is a server emulator for Global MapleStory (GMS) version 83.
