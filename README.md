@@ -4,6 +4,7 @@
 3. Edit client hex as described in the instruction
 4. Setup Webhook in Github repository
 5. Develop another server application that runs in the background, receives HTTP request from Github Webhook server
+6. Test
 
 # Cosmic
 Cosmic is a server emulator for Global MapleStory (GMS) version 83.
