@@ -1,4 +1,9 @@
-﻿# Cosmic
+﻿# Current TODO
+1. Set up and run the server on Amazon AWS EC2 instance
+2. Designate a fixed IP address to the instance through subscription
+3. Edit client hex as described in the instruction
+
+# Cosmic
 Cosmic is a server emulator for Global MapleStory (GMS) version 83.
 
 ## Introduction
